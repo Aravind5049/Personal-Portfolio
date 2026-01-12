@@ -65,6 +65,9 @@
 			
 			/* Type Effect for right panel */
 			Resumo.typed();
+			
+			/* Theme Toggle */
+			Resumo.themeToggle();
 		},
 		
 		typed: function(){
@@ -329,6 +332,38 @@
 					});
 				}
 				return false; 
+			});
+		},
+		
+		themeToggle: function(){
+			var themeToggle = $('#theme_toggle');
+			var body = $('body');
+			
+			// Update icon based on theme
+			function updateThemeIcon(theme) {
+				var icon = themeToggle.find('.icon');
+				if(theme === 'light') {
+					icon.text('🌙');
+				} else {
+					icon.text('☀️');
+				}
+			}
+			
+			// Initialize theme from localStorage or default to 'dark'
+			var currentTheme = localStorage.getItem('theme') || 'dark';
+			body.removeClass('light dark').addClass(currentTheme);
+			updateThemeIcon(currentTheme);
+			
+			// Handle theme toggle click
+			themeToggle.on('click', function(e){
+				e.preventDefault();
+				var currentTheme = body.hasClass('light') ? 'light' : 'dark';
+				var newTheme = currentTheme === 'light' ? 'dark' : 'light';
+				body.removeClass('light dark').addClass(newTheme);
+				localStorage.setItem('theme', newTheme);
+				updateThemeIcon(newTheme);
+				console.log('Theme switched to: ' + newTheme);
+				return false;
 			});
 		},
 		

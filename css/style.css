@@ -443,6 +443,44 @@ body.light .resumo_fn_right .right_bottom .download_resume a:hover{
 	margin-top: 4px;
 	background-color: #ddd;
 }
+/* Theme Toggle Button */
+.resumo_fn_right .theme_toggle{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-ms-align-items: center;
+	align-items: center;
+	justify-content: center;
+	position: fixed;
+	z-index: 10000;
+	text-decoration: none;
+	right: 150px;
+	top: 40px;
+	pointer-events: auto;
+	cursor: pointer;
+	background-color: transparent;
+	padding: 10px;
+	margin: -10px;
+	width: 44px;
+	height: 44px;
+	border-radius: 50%;
+	transition: all 0.3s ease;
+	border: 1px solid rgba(255,255,255,.2);
+}
+.resumo_fn_right .theme_toggle:hover{
+	background-color: rgba(255,255,255,.1);
+	border-color: rgba(255,255,255,.3);
+}
+.resumo_fn_right .theme_toggle .icon{
+	font-size: 20px;
+	line-height: 1;
+	transition: transform 0.3s ease;
+}
+.resumo_fn_right .theme_toggle:hover .icon{
+	transform: rotate(20deg);
+}
 /*------------------------------------------------------------------*/
 /*	04) Right Hidden Navigation
 /*------------------------------------------------------------------*/
@@ -2439,6 +2477,14 @@ body.light .about_slider_item p{
 		background-color: #181715;
 		border: 1px solid #151412;
 	}
+	.resumo_fn_right .theme_toggle{
+		right: 70px;
+		top: 10px;
+		width: 40px;
+		height: 40px;
+		background-color: #181715;
+		border: 1px solid #151412;
+	}
 	.resumo_fn_navigation{width: 100%;}
 	.resumo_fn_right .right_in{height: auto !important;}
 	.resumo_fn_left{min-width: 100%;min-height: inherit;width: 100%;margin-left: 0;}
@@ -2625,6 +2671,8 @@ body.light .resumo_fn_contact .contact_form a:hover,
 body.light .resumo_fn_contact .contact_form button:hover{border-color: var(--mc);color: var(--mc);}
 body.light .resumo_fn_right .menu_trigger{color: #333;}
 body.light .resumo_fn_right .menu_trigger .hamb span{background-color: #333;}
+body.light .resumo_fn_right .theme_toggle{border-color: rgba(0,0,0,.2);}
+body.light .resumo_fn_right .theme_toggle:hover{background-color: rgba(0,0,0,.05);border-color: rgba(0,0,0,.3);}
 body.light .resumo_fn_progress_bar .progress_title{color: #333;}
 body.light .resumo_fn_progress_bar .progress_percent{background-color: rgba(0,0,0,.05);}
 body.light .resumo_fn_progress_bar .progress_percent:after{border-top-color: rgba(0,0,0,.05);}
@@ -2676,7 +2724,10 @@ body.light .fn__nav:after{background-color: #ddd;}
 body.light .fn__nav a{color: #333;}
 body.light .fn__nav a:hover{color: #111;}
 body.light .resumo_fn_modalbox .modal_content::-webkit-scrollbar-thumb{border-color: #fafafa;}
-@media(max-width:768px){body.light .resumo_fn_right .menu_trigger{background-color: #fafafa;border: 1px solid #ddd;}}
+@media(max-width:768px){
+	body.light .resumo_fn_right .menu_trigger{background-color: #fafafa;border: 1px solid #ddd;}
+	body.light .resumo_fn_right .theme_toggle{background-color: #fafafa;border: 1px solid #ddd;}
+}
 
 
 

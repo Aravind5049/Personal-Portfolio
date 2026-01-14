@@ -1,0 +1,35 @@
+/* Swiper compatibility with existing Owl Carousel styles */
+.about_slider_wrapper .swiper,
+.blog_slider_wrapper .swiper {
+  position: relative;
+  width: 100%;
+}
+
+.about_slider_item .img_holder,
+.blog_slider .item .img_holder {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.about_slider_item .img_holder img,
+.blog_slider .item .img_holder img {
+  opacity: 0 !important;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about_slider_item .abs_img,
+.blog_slider .item .abs_img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+

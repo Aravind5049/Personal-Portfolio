@@ -363,7 +363,7 @@
 				localStorage.setItem('theme', newTheme);
 				updateThemeIcon(newTheme);
 				console.log('Theme switched to: ' + newTheme);
-				return false; 
+				return false;
 			});
 		},
 		

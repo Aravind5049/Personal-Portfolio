@@ -1,0 +1,81 @@
+/* Theme Toggle Fix */
+.resumo_fn_right .theme_toggle,
+.resumo_fn_right button.theme_toggle {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  position: fixed !important;
+  z-index: 10000002 !important;
+  right: 150px !important;
+  top: 40px !important;
+  pointer-events: auto !important;
+  cursor: pointer !important;
+  background-color: transparent !important;
+  padding: 10px !important;
+  margin: -10px !important;
+  width: 44px !important;
+  height: 44px !important;
+  border-radius: 50% !important;
+  transition: all 0.3s ease !important;
+  border: 1px solid rgba(255,255,255,.2) !important;
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
+.resumo_fn_right .theme_toggle:hover,
+.resumo_fn_right button.theme_toggle:hover {
+  background-color: rgba(255,255,255,.1) !important;
+  border-color: rgba(255,255,255,.3) !important;
+}
+
+.resumo_fn_right .theme_toggle .icon,
+.resumo_fn_right button.theme_toggle .icon {
+  font-size: 20px !important;
+  line-height: 1 !important;
+  transition: transform 0.3s ease !important;
+  pointer-events: none !important;
+}
+
+.resumo_fn_right .theme_toggle:hover .icon,
+.resumo_fn_right button.theme_toggle:hover .icon {
+  transform: rotate(20deg) !important;
+}
+
+body.light .resumo_fn_right .theme_toggle,
+body.light .resumo_fn_right button.theme_toggle {
+  border-color: rgba(0,0,0,.2) !important;
+}
+
+body.light .resumo_fn_right .theme_toggle:hover,
+body.light .resumo_fn_right button.theme_toggle:hover {
+  background-color: rgba(0,0,0,.05) !important;
+  border-color: rgba(0,0,0,.3) !important;
+}
+
+/* Exclude from cursor system */
+.resumo_fn_right .theme_toggle,
+.resumo_fn_right button.theme_toggle {
+  cursor: pointer !important;
+  -webkit-tap-highlight-color: transparent !important;
+  user-select: none !important;
+  -webkit-user-select: none !important;
+}
+
+@media(max-width: 1200px) {
+  .resumo_fn_right .theme_toggle,
+  .resumo_fn_right button.theme_toggle {
+    right: 70px !important;
+    top: 10px !important;
+    width: 40px !important;
+    height: 40px !important;
+    background-color: #181715 !important;
+    border: 1px solid #151412 !important;
+  }
+  
+  body.light .resumo_fn_right .theme_toggle,
+  body.light .resumo_fn_right button.theme_toggle {
+    background-color: #fafafa !important;
+    border: 1px solid #ddd !important;
+  }
+}
+

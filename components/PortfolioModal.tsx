@@ -51,9 +51,9 @@ export default function PortfolioModal({
 
   return (
     <div className={`resumo_fn_modalbox ${isOpen ? 'opened' : ''}`}>
-      <a className="extra_closer" href="#" onClick={(e) => { e.preventDefault(); onClose(); }}></a>
+      <a className="extra_closer" href="#" onClick={(e) => { e.preventDefault(); onClose(); }} aria-label="Close modal"></a>
       <div className="box_inner">
-        <a className="closer" href="#" onClick={(e) => { e.preventDefault(); onClose(); }}>
+        <a className="closer" href="#" onClick={(e) => { e.preventDefault(); onClose(); }} aria-label="Close modal">
           <span></span>
         </a>
         <div className="modal_content">
@@ -108,24 +108,24 @@ export default function PortfolioModal({
             </div>
             <p className="fn__desc">{item.description}</p>
             {item.role.length > 0 && (
-              <p className="fn__desc">
-                <strong>My Role & Activities</strong>
+              <div className="fn__desc">
+                <p><strong>My Role & Activities</strong></p>
                 <ul>
                   {item.role.map((role, idx) => (
                     <li key={idx}>{role}</li>
                   ))}
                 </ul>
-              </p>
+              </div>
             )}
             {item.tools.length > 0 && (
-              <p className="fn__desc">
-                <strong>Tools & Technologies</strong>
+              <div className="fn__desc">
+                <p><strong>Tools & Technologies</strong></p>
                 <ul>
                   {item.tools.map((tool, idx) => (
                     <li key={idx}>{tool}</li>
                   ))}
                 </ul>
-              </p>
+              </div>
             )}
           </div>
           <div className="fn__nav" data-from="blog" data-index={item.id}>

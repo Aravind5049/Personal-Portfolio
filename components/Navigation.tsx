@@ -57,7 +57,7 @@ export default function Navigation() {
               </ul>
             </div>
             <div className="copyright">
-              <a href="#" target="_blank">Developed by Aravind</a>
+              <a href="#" target="_blank" rel="noopener noreferrer">Developed by Aravind</a>
             </div>
           </div>
         </div>

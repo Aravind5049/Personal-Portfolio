@@ -56,8 +56,8 @@ export default function Sidebar() {
       }
       
       const strings: string[] = []
-      items.each(function() {
-        const text = $(this).text().trim()
+      items.each((index: number, element: HTMLElement) => {
+        const text = $(element).text().trim()
         if (text) {
           strings.push(text)
         }

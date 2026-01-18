@@ -183,7 +183,7 @@
 						</ul>
 					</div>
 					<div class="download_resume">
-						<a href="img/cv.jpg" download>Download Resume</a>
+						<a href="img/Aravind-Resume.pdf" target="_blank" rel="noopener noreferrer">Download Resume</a>
 					</div>
 				</div>
 			</div>
@@ -298,6 +298,11 @@
 											<li>Collaboration: Git, Jira, Agile workflows</li>
 										</ul>
 									</p>
+									<div style="margin-top: 40px; padding: 25px; background: rgba(0, 0, 0, 0.2); border: 2px solid rgba(255, 255, 255, 0.2); border-radius: 8px; text-align: center;">
+										<p class="fn__desc" style="margin: 0; font-size: 1.1em;">
+											I'd love to share more about my design process, case study details, and how I approach solving complex problems. To know more about the process, please <a href="#contact" class="modal-close-to-contact" style="color: inherit; text-decoration: underline; font-weight: 600;">get in touch with me</a>.
+										</p>
+									</div>
 								</div>
 							</div>
 						</li>
@@ -371,6 +376,11 @@
 </ul>
 
 									</p>
+									<div style="margin-top: 40px; padding: 25px; background: rgba(0, 0, 0, 0.2); border: 2px solid rgba(255, 255, 255, 0.2); border-radius: 8px; text-align: center;">
+										<p class="fn__desc" style="margin: 0; font-size: 1.1em;">
+											I'd love to share more about my design process, case study details, and how I approach solving complex problems. To know more about the process, please <a href="#contact" class="modal-close-to-contact" style="color: inherit; text-decoration: underline; font-weight: 600;">get in touch with me</a>.
+										</p>
+									</div>
 								</div>
 							</div>
 						</li>
@@ -462,6 +472,11 @@
 											<li>Collaboration: Git, Jira, Agile workflows</li>
 										</ul>
 									</p>
+									<div style="margin-top: 40px; padding: 25px; background: rgba(0, 0, 0, 0.2); border: 2px solid rgba(255, 255, 255, 0.2); border-radius: 8px; text-align: center;">
+										<p class="fn__desc" style="margin: 0; font-size: 1.1em;">
+											I'd love to share more about my design process, case study details, and how I approach solving complex problems. To know more about the process, please <a href="#contact" class="modal-close-to-contact" style="color: inherit; text-decoration: underline; font-weight: 600;">get in touch with me</a>.
+										</p>
+									</div>
 
 								</div>
 							</div>
@@ -544,6 +559,11 @@
 </ul>
 
 									</p>
+									<div style="margin-top: 40px; padding: 25px; background: rgba(0, 0, 0, 0.2); border: 2px solid rgba(255, 255, 255, 0.2); border-radius: 8px; text-align: center;">
+										<p class="fn__desc" style="margin: 0; font-size: 1.1em;">
+											I'd love to share more about my design process, case study details, and how I approach solving complex problems. To know more about the process, please <a href="#contact" class="modal-close-to-contact" style="color: inherit; text-decoration: underline; font-weight: 600;">get in touch with me</a>.
+										</p>
+									</div>
 							</div>
 						</li>
 						<li class="be_animated">
@@ -602,6 +622,11 @@
 <li>Collaboration: Git, Jira, Agile workflows</li>
 </ul>
 									</p>
+									<div style="margin-top: 40px; padding: 25px; background: rgba(0, 0, 0, 0.2); border: 2px solid rgba(255, 255, 255, 0.2); border-radius: 8px; text-align: center;">
+										<p class="fn__desc" style="margin: 0; font-size: 1.1em;">
+											I'd love to share more about my design process, case study details, and how I approach solving complex problems. To know more about the process, please <a href="#contact" class="modal-close-to-contact" style="color: inherit; text-decoration: underline; font-weight: 600;">get in touch with me</a>.
+										</p>
+									</div>
 								</div>
 							</div>
 						</li>
@@ -1038,6 +1063,35 @@ jQuery(document).ready(function($){
 	} else {
 		console.error('Theme toggle button not found!');
 	}
+});
+</script>
+
+<!-- Modal Close to Contact -->
+<script>
+jQuery(document).ready(function($){
+	$(document).on('click', '.modal-close-to-contact', function(e){
+		e.preventDefault();
+		var modalBox = $('.resumo_fn_modalbox');
+		var contactSection = $('#contact');
+		
+		// Close the modal
+		modalBox.removeClass('opened hovered');
+		modalBox.find('.modal_in').html('');
+		$('body').removeClass('modal');
+		
+		// Small delay to ensure modal closes smoothly, then scroll to contact
+		setTimeout(function(){
+			if(contactSection.length) {
+				$('html, body').animate({
+					scrollTop: contactSection.offset().top - 100
+				}, 800);
+			} else {
+				window.location.href = '#contact';
+			}
+		}, 300);
+		
+		return false;
+	});
 });
 </script>
 
